@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+    width: 100%;
+    background:red;
+    display:flex;
+    flex-direction: column;
+    }
+    .container-row {
+        background: blue;
+        border: 1px solid white;
+    }
+    .btn {
+        padding: 5px;
+        min-width:30px;
+    }
+    .btn-ac {
+        min-width: 60px !important;
+    }
+    .input{
+        padding:5px;
+    }
+
+    @media only screen and (max-width:600px) {
+        .container {
+            background:blue;
+            flex-direction: column-reverse;
+        }
+    }
+
+    @media only screen and (max-width:250px) {
+        .container {
+            background:green;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h3>Calculator</h3>
+    <div class="container">
+        <div class="container-row">
+            <input id="display" name="display" class="input" style="
+                width: 98%;
+                padding: 8px;
+                ">
+        </div>
+        <div class="container-row">
+            <button class="btn btn-ac" onClick="btnClick(this.innerText)">AC</button>
+            <button class="btn" onClick="btnClick(this.innerText)">C</button>
+            <button class="btn" onClick="btnClick(this.innerText)">*</button></div>
+        <div class="container-row">
+            <button class="btn" value="7" onClick="btnClick(this.innerText)">7</button>
+            <button class="btn" value="8" onClick="btnClick(this.innerText)">8</button>
+            <button class="btn" value="9" onClick="btnClick(this.innerText)">9</button>
+            <button class="btn" value="/" onClick="btnClick(this.innerText)">/</button></div>
+        <div class="container-row">
+            <button class="btn" value="4" onClick="btnClick(this.innerText)">4</button>
+            <button class="btn" value="5" onClick="btnClick(this.innerText)">5</button>
+            <button class="btn" value="6" onClick="btnClick(this.innerText)">6</button>
+            <button class="btn" value="+" onClick="btnClick(this.innerText)">+</button></div>
+        <div class="container-row">
+            <button class="btn" value="1" onClick="btnClick(this.innerText)">1</button>
+            <button class="btn" value="2" onClick="btnClick(this.innerText)">2</button>
+            <button class="btn" value="3" onClick="btnClick(this.innerText)">3</button>
+            <button class="btn" value="-" onClick="btnClick(this.innerText)">-</button></div>
+        <div class="container-row">
+            <button class="btn" value="+-" onClick="btnClick(this.innerText)">+-</button>
+            <button class="btn" value="0" onClick="btnClick(this.innerText)">0</button>
+            <button class="btn" value="." onClick="btnClick(this.innerText)">.</button>
+            <button class="btn" value="=" onClick="btnClick(this.innerText)">=</button></div>
+    </div>
+    <script src="./week2day2.js"></script>
+</body>
+</html>
